@@ -1,19 +1,25 @@
-<form action="">
-  <input
-    class="form-control my-2"
-    type="text"
-    name="newTask"
-    id="newTask"
-    [(ngModel)]="newTask"
-    placeholder="Create New Task .."
-    autofocus
-  />
+<div>
+  <form action="" class="">
+    <div class="flex justify-center">
+      <input
+        class="form-control my-2 w-3/4"
+        type="text"
+        name="newTask"
+        id="newTask"
+        [(ngModel)]="newTask"
+        placeholder="Create New Task .."
+        autofocus
+      />
+    </div>
 
-  <button
-    class="btn btn-outline-primary my-3"
-    type="submit"
-    (click)="addTodo()"
-  >
-    Add Task
-  </button>
-</form>
+    <div class="flex justify-center">
+      <button
+        class="btn btn-outline-primary my-3"
+        type="submit"
+        (click)="addTodo()"
+      >
+        Add Task
+      </button>
+    </div>
+  </form>
+</div>
