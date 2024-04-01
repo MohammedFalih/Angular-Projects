@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoAppComponent implements OnInit {
   ngOnInit() {
-    
-    const storedTasks = localStorage.getItem('myTasks');
-    if (storedTasks) {
-      this.taskList = JSON.parse(storedTasks);
+    if(typeof localStorage !== 'undefined' && localStorage.getItem('myTasks')) {
+      const storedTasks = localStorage.getItem('myTasks');
+      if (storedTasks) {
+        this.taskList = JSON.parse(storedTasks);
+      }
     }
   }
   title: string = 'To-Do List';

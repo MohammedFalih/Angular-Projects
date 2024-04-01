@@ -11,7 +11,7 @@
   <h3 class="my-5 text-2xl">My Current Tasks ({{ taskList.length }})</h3>
   <ul *ngFor="let task of taskList; let id = index">
     <li class="d-flex my-3 py-3 px-3">
-      {{ task }}
+      {{ task | titlecase }}
       <button class="btn btn-outline-danger" (click)="removeTodo(id)">
         Delete
       </button>
