@@ -84,3 +84,21 @@ img {
     position: absolute;
     right: 8px;
 }
+
+.back button {
+    border-radius: 4px;
+}
+
+.back button:hover {
+    background-color: #ff3e6c;
+    color: white;
+}
+
+.place button {
+    background-color: #ff3e6c;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: small;
+    text-transform: uppercase;
+}

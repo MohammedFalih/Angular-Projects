@@ -5,6 +5,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
 import { RouterModule } from '@angular/router';
+import { FilterPipe } from './shared/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,13 +14,15 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     CartComponent,
     ProductsComponent,
+    FilterPipe,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       // { path: 'shopping', component: ShoppingAppComponent },
       { path: 'cart', component: CartComponent }
-    ])
+    ]),
+  FormsModule
   ],
   exports: [
     HeaderComponent,

@@ -1,6 +1,8 @@
 <header>
   <div class="navbar navbar-dark bg-white shadow-sm">
-    <img class="logo-image" src="assets/myntra.png" />
+    <a routerLink="/shopping"
+      ><img class="logo-image" src="assets/myntra.png"
+    /></a>
     <div class="d-flex absolute gap-10 items-center left-28">
       <li>Men</li>
       <li>Women</li>
@@ -11,6 +13,8 @@
         type="text"
         name="search"
         placeholder="Search for products, brands and more"
+        [(ngModel)]="searchTerm"
+        (keyup)="search($event)"
       />
       <span class="inline-block size-6">
         <img src="assets/search.png" />
@@ -18,9 +22,11 @@
     </div>
     <button class="btn" (click)="navigatetoCart()">
       <div class="btn-content relative">
-          <img src="assets/bag.svg" class="btn-img" />
-          <div style="font-size: 10px" class="badge cartAmount">5</div>
-          <span class="btn-text text text-sm">Bag</span>
+        <img src="assets/bag.svg" class="btn-img" />
+        <div style="font-size: 10px" class="badge cartAmount">
+          {{ cartItems }}
+        </div>
+        <span class="btn-text text text-sm">Bag</span>
       </div>
     </button>
   </div>

@@ -1,52 +1,73 @@
-<ng-container *ngIf="true">
-  <div class="container min-h-screen my-8 border border-l-rose-950">
+<ng-container *ngIf="cartItems != 0">
+  <div class="container my-8 border border-l-rose-950">
+    <div class="flex gap-14 justify-center items-center">
+      <h3 class="font-bold py-3">Total Items: {{ cartItems.length }}</h3>
+      <button
+        class="btn btn-primary h-8 font-bold text-sm"
+        (click)="clearCart()"
+      >
+        Clear Bag
+      </button>
+    </div>
     <div *ngFor="let item of cartItems" class="flex cart-item">
       <div>
         <img src="{{ item.image }}" alt="" />
       </div>
       <div class="title">
         <h4>{{ item.title }}</h4>
-        <div class= "qty">
+        <div class="qty">
           <label for="cars">Qty:</label>
 
-          <select class="ml-2" name="qty" id="qty">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+          <select class="ml-2" name="qty" id="qty" [(ngModel)]="item.quantity">
+            <option *ngFor="let i of quantityRange()" [value]="i">{{ i }}</option>
           </select>
         </div>
         <div class="price w-fit mt-2">
-          <p class="text-sm"><strong>{{item.price | currency}}</strong></p>
+          <p class="text-sm">
+            <strong>{{ item.price | currency }}</strong>
+          </p>
         </div>
-      <div class="last flex">
-        <div class="delivery mt-1">
-          <p class="text-xs">Delivery in <strong>3 days.</strong></p>
-        </div>
-        <div class="remove">
-          <button class="btn btn-danger">Remove</button>
+        <div class="last flex">
+          <div class="delivery mt-1">
+            <p class="text-xs">Delivery in <strong>3 days.</strong></p>
+          </div>
+          <div class="remove">
+            <button class="btn btn-danger" (click)="removeItem(item)">
+              Remove
+            </button>
+          </div>
         </div>
       </div>
-      </div>
+    </div>
+  </div>
+  <div class="max-w-60 container">
+    <div class="flex justify-between px-1">
+      <div class="font-bold">Total Amount:</div>
+      <div class="font-bold">{{ grandTotal | currency }}</div>
+    </div>
+    <div class="place mb-5">
+      <button class="btn w-60">Place Order</button>
     </div>
   </div>
 </ng-container>
 
-<ng-container *ngIf="false">
-  <div class="container min-h-screen my-8 border border-l-rose-950">
+<ng-container *ngIf="cartItems == 0">
+  <div class="container-2 min-h-screen my-8 border border-l-rose-950">
     <div class="image flex justify-center items-center mt-5">
       <img src="assets/empty-bag.webp" alt="" />
     </div>
     <div>
-      <h3 class="flex justify-center items-center text-2xl font-bold my-2">
+      <h3 class="flex justify-center items-center text-2xl font-bold mb-2">
         Hey, it feels so light!
       </h3>
-      <p class="flex justify-center items-center">
+      <p class="flex justify-center items-center mb-4">
         There is nothing in your bag. Let's add some items.
       </p>
     </div>
-    <div class="btn my-3 w-full flex justify-center items-center">
-      <button class="cart-btn font-bold">ADD ITEMS</button>
+    <div class="back flex justify-center items-center">
+      <a routerLink="/shopping">
+        <button class="cart-btn font-bold">ADD ITEMS</button>
+      </a>
     </div>
   </div>
 </ng-container>
