@@ -1,0 +1,86 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-btn {
+    color: #ff3e6c;
+    height: 44px;
+    width: 120px;
+    border: 1px solid #ff3e6c;
+}
+
+img {
+    height: 240px;
+    width: auto;
+}
+
+.container {
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+}
+
+.cart-item {
+    width: 450px;
+    min-height: 120px;
+    overflow: hidden;
+    margin: 16px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+.cart-item img {
+    min-width: 100px;
+    max-width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    padding: 4px;
+}
+
+.cart-item .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    padding: 4px 0px;
+    width: 100%;
+}
+
+.title h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    padding: 4px 0px;
+}
+
+.qty {
+    margin-top: 6px;
+    background-color: rgba(119, 136, 153, 0.155);
+    width: 86px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(119, 136, 153, 0.155);
+    border-radius: 6px;
+}
+
+.qty label {
+    color: #ff3e6c;
+    font-weight: bold;
+}
+
+.remove {
+    width: 100%;
+    position: relative;
+}
+
+.remove button {
+    height: 22px;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    right: 8px;
+}

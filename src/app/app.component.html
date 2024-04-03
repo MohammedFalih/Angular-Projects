@@ -1,1 +1,14 @@
-<app-todo-app></app-todo-app>
+<li>
+  <a [routerLink]="['']">Home</a>
+</li>
+<li>
+  <a [routerLink]="['todo']">Todo</a>
+</li>
+
+<li>
+  <a [routerLink]="['shopping']">Cart</a>
+</li>
+
+<div class="min-h-screen">
+  <router-outlet></router-outlet>
+</div>

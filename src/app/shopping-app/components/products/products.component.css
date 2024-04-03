@@ -1,0 +1,26 @@
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 350px;
+    width: 230px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.card img {
+    height: 200px;
+    width: 170px;
+    margin-bottom: 12px;
+}

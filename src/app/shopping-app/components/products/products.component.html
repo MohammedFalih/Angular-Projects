@@ -1,0 +1,49 @@
+<div class="container py-16">
+  <div class="row">
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <img src="{{ item.image }}" alt="" />
+        <h4
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+          "
+        >
+          {{ item.title }}
+        </h4>
+        <p
+          style="
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 400;
+            padding: 2px 0px;
+          "
+        >
+          {{ item.description }}
+        </p>
+        <p>
+          <strong>Price: {{ item.price | currency }}</strong>
+        </p>
+        <button
+          class="btn"
+          style="
+            background-color: #ff3e6c;
+            border: 1px solid #ff3e6c;
+            color: white;
+            padding: 6px 0px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+          "
+          (click)="addtoCart(item)"
+        >
+          ADD TO BAG
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>

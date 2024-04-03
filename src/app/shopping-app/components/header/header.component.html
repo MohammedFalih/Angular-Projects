@@ -1,0 +1,27 @@
+<header>
+  <div class="navbar navbar-dark bg-white shadow-sm">
+    <img class="logo-image" src="assets/myntra.png" />
+    <div class="d-flex absolute gap-10 items-center left-28">
+      <li>Men</li>
+      <li>Women</li>
+      <li>Electronics</li>
+    </div>
+    <div class="form-group absolute right-96 d-none d-lg-inline-block">
+      <input
+        type="text"
+        name="search"
+        placeholder="Search for products, brands and more"
+      />
+      <span class="inline-block size-6">
+        <img src="assets/search.png" />
+      </span>
+    </div>
+    <button class="btn" (click)="navigatetoCart()">
+      <div class="btn-content relative">
+          <img src="assets/bag.svg" class="btn-img" />
+          <div style="font-size: 10px" class="badge cartAmount">5</div>
+          <span class="btn-text text text-sm">Bag</span>
+      </div>
+    </button>
+  </div>
+</header>
