@@ -31,6 +31,7 @@ export class CartServiceService {
       product.quantity = 1;
       this.cartItemList.push(product);
     }
+    console.log(this.cartItemList)
     
     this.productList.next(this.cartItemList)
 

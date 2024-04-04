@@ -20,6 +20,7 @@ export class CartComponent implements OnInit {
 
   removeItem(item: any) {
     this.cart.removeCartItem(item);
+    this.calculateGrandTotal();
   } 
 
   clearCart() {
@@ -28,5 +29,14 @@ export class CartComponent implements OnInit {
 
   quantityRange(): number[] {
     return Array.from({ length: 4 }, (_, index) => index + 1);
+  }
+   onQuantityChange(): void {
+    this.calculateGrandTotal();
+  }
+
+  calculateGrandTotal(): void {
+    this.grandTotal = this.cartItems.reduce((total: number, item: any) => {
+      return total + (item.price * item.quantity);
+    }, 0);
   }
 }

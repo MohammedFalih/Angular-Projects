@@ -18,7 +18,7 @@
         <div class="qty">
           <label for="cars">Qty:</label>
 
-          <select class="ml-2" name="qty" id="qty" [(ngModel)]="item.quantity">
+          <select class="ml-2" name="qty" id="qty" [(ngModel)]="item.quantity" (change)="onQuantityChange()">
             <option *ngFor="let i of quantityRange()" [value]="i">{{ i }}</option>
           </select>
         </div>
