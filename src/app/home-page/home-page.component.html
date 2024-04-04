@@ -1,19 +1,24 @@
 <div class="parent">
   <div class="inner">
-    <div>
+    <div class="column">
       <a [routerLink]="['shopping']">
-        <img class="h-48" src="assets/online-shopping.jpg" alt="" />
+        <img class="h-48" src="assets/online-shopping.jpg" alt="online-shop" />
         <h3 class="font-bold text-xl">Online Store</h3>
       </a>
-    </div>
-    <div>
       <a [routerLink]="['todo']">
-        <img class="h-48" src="assets/todo-logo.jpg" alt="" />
+        <img class="h-48" src="assets/todo-logo.jpg" alt="todo" />
         <h3 class="font-bold text-xl">Todo-App</h3>
+      </a>
+    </div>
+    <div class="column">
+      <a [routerLink]="['weather']">
+        <img class="h-48" src="assets/climate.png" alt="climate" />
+        <h3 class="font-bold text-xl">Weather App</h3>
       </a>
     </div>
   </div>
 </div>
+
 <!-- <div class="min-h-screen">
   <router-outlet></router-outlet>
 </div> -->

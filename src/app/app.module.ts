@@ -7,6 +7,7 @@ import { ToDoModule } from './to-do/to-do.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ShoppingAppModule } from './shopping-app/shopping-app.module';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherAppModule } from './weather-app/weather-app.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ToDoModule,
     ShoppingAppModule,
+    WeatherAppModule,
     HttpClientModule
   ],
   providers: [

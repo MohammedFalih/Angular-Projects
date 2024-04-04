@@ -1,0 +1,82 @@
+.wrapper {
+  background-color: #0b1623;
+  width: 85vw;
+  height: 93vh;
+  margin: 8px auto;
+  border-radius: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+::placeholder {
+  color: white;
+  font: 16px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.title h1 {
+  letter-spacing: 6px;
+  font-size: 60px;
+  margin-bottom: 12px;
+  padding-top: 20px;
+}
+
+.input {
+  background-color: transparent;
+  color: #e7f6ff;
+  font: 16px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+}
+
+input {
+  border-radius: 8px;
+}
+
+#cityname {
+    padding-top: 12px;
+    font-size: 46px;
+    margin-bottom: 20px;
+} 
+
+.output {
+    height: 450px;
+    padding-top: 4px;
+}
+
+.title {
+  margin-top: 30px;
+  text-align: center;
+  color: rgb(250, 249, 249);
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+}
+
+.level p {
+    padding: 0px 10px;
+    font-size: 28px;
+    margin: 12px 0px;
+}
+
+#degree {
+    font-size: 60px;
+}
+
+.errorimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorimg img {
+  height: 300px;
+  width: auto;
+}
+
+#errortext {
+  font-size: 36px;
+}

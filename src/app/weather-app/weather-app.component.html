@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="title h-16 flex justify-center items-center py-5">
+    <h1 id="apptitle" style="color: #e3edf8" class="text-4xl font-bold">WEATHER APP</h1>
+  </div>
+  <form (submit)="searchCity(city)">
+    <div class="search flex justify-center gap-6 my-5">
+      <input
+        class="w-72 px-2 input"
+        name="city"
+        type="text"
+        [(ngModel)]="city"
+        autofocus
+        placeholder="Enter City"
+      />
+      <button type="submit" class="btn btn-danger h-10 py-0 font-bold text-lg">
+        Search
+      </button>
+    </div>
+  </form>
+
+<ng-container *ngIf="!isError">
+  <div  class="container output text-white w-2/3">
+    <div class="title container py-3 mb-3">
+      <h1 id="cityname" >{{ apiData.name }}</h1>
+      <h1 id="degree">{{ apiData.main.temp | decimal }}°C</h1>
+    </div>
+    <div class="condition text-center my-2">
+      <p class="text-2xl">{{ apiData.weather[0].main }}</p>
+    </div>
+    <div class="level">
+      <p>H: {{ apiData.main.temp_max | decimal }}°C</p>
+      <p>L: {{ apiData.main.temp_min | decimal }}°C</p>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isError">
+  <div class="errorimg">
+    <img src="assets/error.jpg" alt="">
+  </div>
+  <h2 id="errortext" class="text-red-600 text-center mt-4">Sorry! Invalid Input</h2>
+</ng-container>
+</div>
