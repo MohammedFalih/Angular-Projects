@@ -15,6 +15,6 @@ export class TodoListComponent {
 
   clear() {
     this.taskList = [];
-    localStorage.setItem('myTasks', JSON.stringify(this.taskList))
+    localStorage.setItem('myTasks', JSON.stringify(this.taskList));
   }
 }

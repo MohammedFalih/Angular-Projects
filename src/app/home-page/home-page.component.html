@@ -1,1 +1,19 @@
-<p>home-page works!</p>
+<div class="parent">
+  <div class="inner">
+    <div>
+      <a [routerLink]="['shopping']">
+        <img class="h-48" src="assets/online-shopping.jpg" alt="" />
+        <h3 class="font-bold text-xl">Online Store</h3>
+      </a>
+    </div>
+    <div>
+      <a [routerLink]="['todo']">
+        <img class="h-48" src="assets/todo-logo.jpg" alt="" />
+        <h3 class="font-bold text-xl">Todo-App</h3>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- <div class="min-h-screen">
+  <router-outlet></router-outlet>
+</div> -->

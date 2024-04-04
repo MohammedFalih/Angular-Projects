@@ -1,12 +1,11 @@
 <div *ngIf="taskList.length > 0; then tasks; else empty"></div>
 
 <ng-template #tasks>
-  <div class="absolute right-36 top-64">
-    <div>
+<div class="container relative border border-red-800">
+  <div class="absolute right-10 top-8">
       <button class="btn btn-outline-primary my-1" (click)="clear()">
         Clear
       </button>
-    </div>
   </div>
   <h3 class="my-5 text-2xl">My Current Tasks ({{ taskList.length }})</h3>
   <ul *ngFor="let task of taskList; let id = index">
@@ -17,6 +16,7 @@
       </button>
     </li>
   </ul>
+</div>
 </ng-template>
 
 <ng-template #empty>

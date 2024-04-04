@@ -1,0 +1,18 @@
+.parent {
+    margin: 16px auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+
+}
+
+.inner {
+    height: 600px;
+    width: 920px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px;
+}
+
