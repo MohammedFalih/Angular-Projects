@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "id": "Admin",
+      "name": "John Doe",
+      "password": "P@ssw0rd!",
+      "email": "johndoe@example.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "12345",
+      "name": "Mohammed Falih",
+      "password": "Sample@123",
+      "email": "thisisfalih@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    }
+  ]
+}
