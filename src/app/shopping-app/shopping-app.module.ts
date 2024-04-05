@@ -18,11 +18,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      // { path: 'shopping', component: ShoppingAppComponent },
-      { path: 'cart', component: CartComponent }
-    ]),
-  FormsModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

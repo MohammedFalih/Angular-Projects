@@ -8,6 +8,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ShoppingAppModule } from './shopping-app/shopping-app.module';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherAppModule } from './weather-app/weather-app.module';
+import { AuthenticationModule } from './authentication/authentication.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from '../material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,10 +25,15 @@ import { WeatherAppModule } from './weather-app/weather-app.module';
     ToDoModule,
     ShoppingAppModule,
     WeatherAppModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthenticationModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

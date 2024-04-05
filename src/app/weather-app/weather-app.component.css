@@ -16,7 +16,7 @@
 
 .title h1 {
   letter-spacing: 6px;
-  font-size: 60px;
+  font-size: 3.75rem;
   margin-bottom: 12px;
   padding-top: 20px;
 }
@@ -24,7 +24,7 @@
 .input {
   background-color: transparent;
   color: #e7f6ff;
-  font: 16px;
+  font: 1rem;
   font-weight: bold;
   letter-spacing: 4px;
   text-transform: capitalize;
@@ -36,7 +36,7 @@ input {
 
 #cityname {
     padding-top: 12px;
-    font-size: 46px;
+    font-size: 2.875rem;
     margin-bottom: 20px;
 } 
 
