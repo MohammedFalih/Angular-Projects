@@ -1,8 +1,7 @@
 <div class="toolbar" *ngIf="showNavbar" role="banner">
   <span class="ml-3 text-lg">Welcome</span>
   <a [routerLink]="['dashboard']">Home</a>
-  <a [routerLink]="['user']">User</a>
-  <a routerLink="/customer">Customer</a>
+  <a *ngIf="isAdmin" [routerLink]="['user']">User</a>
   <div class="container"></div>
 
   <a [routerLink]="['login']">Logout</a>

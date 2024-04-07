@@ -26,8 +26,8 @@ export class AuthService {
     return this.http.post(this.user_Url, inputdata)
   }
 
-  updation(code: any, inputData: any) {
-    return this.http.put<any>(this.user_Url + code, inputData)
+  updation(id: any, inputData: any) {
+    return this.http.put<any>(this.user_Url + '/' + id, inputData)
   }
 
   isLoggedIn() {

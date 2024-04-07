@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update-popup',
@@ -14,7 +15,9 @@ export class UpdatePopupComponent implements OnInit {
   constructor(
     private service: AuthService,
     private formbuilder: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private dialog: MatDialogRef<UpdatePopupComponent>,
+    private toastr: ToastrService
   ) {
 
   }
@@ -24,7 +27,7 @@ export class UpdatePopupComponent implements OnInit {
       this.roleList = res;
     })
     if (this.data.usercode != null && this.data.usercode != '') {
-      this.service.getDatabyCode(this.data.code).subscribe((res) => {
+      this.service.getDatabyCode(this.data.usercode).subscribe((res) => {
         this.editData = res;
         this.updateform.setValue({
           id: this.editData.id,
@@ -50,5 +53,15 @@ export class UpdatePopupComponent implements OnInit {
     isactive: this.formbuilder.control(false)
   });
 
-  UpdateUser() { }
+  UpdateUser() {
+    if (this.updateform.valid) {
+      this.service.updation(this.updateform.value.id, this.updateform.value).subscribe((res) => {
+        this.toastr.success('Updated Successfully');
+        console.log(res)
+        this.dialog.close()
+      })
+    } else {
+      this.toastr.warning('Invalid inputs')
+    }
+  }
 }

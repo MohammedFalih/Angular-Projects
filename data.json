@@ -3,7 +3,7 @@
     {
       "id": "Admin",
       "name": "John Doe",
-      "password": "P@ssw0rd!",
+      "password": "Admin12",
       "email": "johndoe@example.com",
       "gender": "male",
       "role": "Admin",
@@ -15,7 +15,7 @@
       "password": "Password@1",
       "email": "thisisfalih@gmail.com",
       "gender": "male",
-      "role": "",
+      "role": "Software Developer",
       "isactive": true
     },
     {
@@ -24,23 +24,23 @@
       "password": "Abd@18_SA",
       "email": "abd@sa.com",
       "gender": "male",
-      "role": "",
-      "isactive": false
+      "role": "HR",
+      "isactive": true
     }
   ],
   "role": [
     {
-      "code": "software developer",
+      "code": "Software Developer",
       "name": "Software Developer",
       "id": "7404"
     },
     {
-      "code": "software tester",
+      "code": "Software Tester",
       "name": "Software Tester",
       "id": "797c"
     },
     {
-      "code": "hr",
+      "code": "HR",
       "name": "HR",
       "id": "6e29"
     }

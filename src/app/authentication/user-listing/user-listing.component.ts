@@ -12,7 +12,7 @@ import { UpdatePopupComponent } from '../update-popup/update-popup.component';
   styleUrl: './user-listing.component.css'
 })
 export class UserListingComponent {
-  usersData!: any;
+  usersData: any;
   dataSource: any;
   displayedColumns: string[] = ['username', 'name', 'email', 'role', 'status', 'action'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -32,14 +32,20 @@ export class UserListingComponent {
   }
 
   updateUser(code: any) {
-    this.dialog.open(UpdatePopupComponent, {
-      enterAnimationDuration: '500ms',
-      exitAnimationDuration: '500ms',
-      width: '50%',
+    this.OpenDialog('500', '500', code)
+  }
+
+  OpenDialog(enteranimation: any, exitanimation: any, code: string) {
+    const popup = this.dialog.open(UpdatePopupComponent, {
+      enterAnimationDuration: enteranimation,
+      exitAnimationDuration: exitanimation,
+      width: '30%',
       data: {
         usercode: code
       }
-    })
-
+    });
+    popup.afterClosed().subscribe(res => {
+      this.getAllUser();
+    });
   }
 }
