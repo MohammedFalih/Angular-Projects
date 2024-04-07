@@ -32,7 +32,7 @@ export class RegisterComponent {
     if (this.registerform.valid) {
       this.authentication.registering(this.registerform.value).subscribe((result) => {
         this.toastr.success('Please contact admin for enable access.', 'Registered successfully')
-        // this.router.navigate(['login'])
+        this.router.navigate(['auth','login'])
       }), (error: any) => {
         console.log(error);
       }

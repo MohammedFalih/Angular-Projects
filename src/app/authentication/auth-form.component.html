@@ -1,1 +1,13 @@
+<div class="toolbar" *ngIf="showNavbar" role="banner">
+  <span class="ml-3 text-lg">Welcome</span>
+  <a [routerLink]="['dashboard']">Home</a>
+  <a [routerLink]="['user']">User</a>
+  <a routerLink="/customer">Customer</a>
+  <div class="container"></div>
+
+  <a [routerLink]="['login']">Logout</a>
+</div>
 <router-outlet></router-outlet>
+<div class="content" style="width: 100%; display: block" role="main">
+
+</div>

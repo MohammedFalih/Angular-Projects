@@ -8,6 +8,10 @@ import { AuthFormComponent } from './authentication/auth-form.component';
 import { CartComponent } from './shopping-app/components/cart/cart.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { ProductsComponent } from './shopping-app/components/products/products.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { DashboardComponent } from './authentication/dashboard/dashboard.component';
+import { authGuard } from './authentication/guard/auth.guard';
+import { UserListingComponent } from './authentication/user-listing/user-listing.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -22,7 +26,10 @@ const routes: Routes = [
   { path: 'weather', component: WeatherAppComponent },
   {
     path: 'auth', component: AuthFormComponent, children: [
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'dashboard', component: DashboardComponent, canActivate:[authGuard] },
+      { path: 'user', component: UserListingComponent, canActivate:[authGuard] },
     ]
   },
 ];

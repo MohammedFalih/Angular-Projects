@@ -5,22 +5,36 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  apiUrl: any = 'http://localhost:3000/user';
+  user_Url: any = 'http://localhost:3000/user';
+  role_Url: any = 'http://localhost:3000/role';
+
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any>(this.user_Url);
   }
 
   getDatabyCode(code: any) {
-    return this.http.get(this.apiUrl + '/' + code);
+    return this.http.get(this.user_Url + '/' + code);
   }
 
-  registering(inputdata:any){
-    return this.http.post(this.apiUrl,inputdata)
+  getRole() {
+    return this.http.get(this.role_Url)
+  }
+
+  registering(inputdata: any) {
+    return this.http.post(this.user_Url, inputdata)
   }
 
   updation(code: any, inputData: any) {
-    return this.http.put<any>(this.apiUrl + code, inputData)
+    return this.http.put<any>(this.user_Url + code, inputData)
+  }
+
+  isLoggedIn() {
+    return sessionStorage.getItem('username') !== null
+  }
+
+  GetUserRole() {
+    return sessionStorage.getItem('userrole') !== null ? sessionStorage.getItem('userrole')?.toString() : '';
   }
 }
