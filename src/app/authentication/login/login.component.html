@@ -1,0 +1,30 @@
+<div class="container w-full bg-red-600 p-4">
+    <mat-card class="container">
+      <mat-card-header class="container flex justify-center size-5">
+        <h1 class="underline font-extrabold">Login</h1>
+      </mat-card-header>
+      <mat-card-content class="container flex w-full py-5">
+        <form [formGroup]="loginForm" (ngSubmit)="loginFunc()">
+          <div class="my-1">
+            <mat-form-field class="w-full">
+              <mat-label>User Name</mat-label>
+              <input matInput formControlName="username" />
+            </mat-form-field>
+          </div>
+  
+          <div class="my-1">
+            <mat-form-field class="w-full">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput formControlName="password" />
+            </mat-form-field>
+          </div>
+  
+          <div class="container flex justify-center gap-20 mt-3">
+            <button mat-raised-button color="primary">Submit</button>
+            <a routerLink="/auth/register" mat-raised-button color="accent">New User?</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
