@@ -26,6 +26,15 @@
       "gender": "male",
       "role": "HR",
       "isactive": true
+    },
+    {
+      "id": "tyson",
+      "name": "Mike Tyson",
+      "password": "P@ssw0rd12",
+      "email": "mike@tyson.com",
+      "gender": "male",
+      "role": "Software Tester",
+      "isactive": true
     }
   ],
   "role": [
