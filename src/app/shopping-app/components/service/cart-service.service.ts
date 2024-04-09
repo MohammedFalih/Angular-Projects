@@ -51,6 +51,7 @@ export class CartServiceService {
         this.cartItemList.splice(index, 1);
       };
     })
+    this.productList.next(this.cartItemList)
   }
 
   clearCart() {
